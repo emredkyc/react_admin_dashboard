@@ -1,4 +1,4 @@
-import { Authenticated, GitHubBanner, Refine, WelcomePage } from "@refinedev/core";
+import { Authenticated, GitHubBanner, Refine } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
@@ -38,21 +38,22 @@ function App() {
                 }}
               >
                 <Routes>
-                  <Route index element={<WelcomePage />} />
-                  <Route index element={<Home />} />
                   <Route path="/register" element={<Register />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/forgot-password" element={<ForgotPassword />} />
-                
-                  <Route 
-                    element={<Authenticated
+                  <Route
+                    element={
+                    <Authenticated 
                       key="authenticated-layout"
                       fallback={<CatchAllNavigate to="/login" />}
-                    />}
-                  > 
-                    <Layout>
-                      <Outlet />
-                    </Layout>
+                    >
+                      <Layout>
+                        <Outlet />
+                      </Layout>
+                    </Authenticated>
+                    }>
+                      <Route index element={<Home />} />
+
                   </Route>
                 </Routes>
                 <RefineKbar />
