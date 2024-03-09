@@ -22,6 +22,13 @@ export const Home = () => {
             totalCount={data?.data.companies.totalCount}
           />
         </Col>
+        <Col xs={24} sm={24} xl={8}>
+          <DashboardTotalCountCard 
+            resource="contacts"
+            isLoading={isLoading}
+            totalCount={data?.data.contacts.totalCount}
+          />
+        </Col>
       </Row>
       <Row
         gutter={[32, 32]}
