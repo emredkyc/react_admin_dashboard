@@ -1,3 +1,5 @@
+import { KanbanColumnSkeleton, ProjectCardSkeleton } from '@/components'
+import { KanbanAddCardButton } from '@/components/tasks/kanban/add-card-button'
 import { KanbanBoardContainer, KanbanBoard } from '@/components/tasks/kanban/board'
 import { ProjectCardMemo } from '@/components/tasks/kanban/card'
 import KanbanColumn from '@/components/tasks/kanban/column'
@@ -134,6 +136,12 @@ const List = ({ children }: React.PropsWithChildren) => {
                 />
               </KanbanItem>
             ))}
+
+            {!taskStages.unassignedStage.length && (
+              <KanbanAddCardButton 
+                onClick={() => handleAddCard({ stageId: 'unassigned' })}
+              />
+            )}
           </KanbanColumn>
 
           {taskStages.columns?.map((column) => (
@@ -152,6 +160,11 @@ const List = ({ children }: React.PropsWithChildren) => {
                   />
                 </KanbanItem>
               ))}
+              {!column.tasks.length && (
+                <KanbanAddCardButton 
+                onClick={() => handleAddCard({ stageId: column.id })}
+              />
+              )}
             </KanbanColumn>
           ))}
         </KanbanBoard>
@@ -169,6 +182,13 @@ const PageSkeleton = () => {
 
   return (
     <KanbanBoardContainer>
+      {Array.from({ length: columnCount }).map((_, index) => (
+        <KanbanColumnSkeleton key={index}>
+          {Array.from({length: itemCount}).map((_, index)=> (
+           <ProjectCardSkeleton  key={index}/>
+          ))}
+        </KanbanColumnSkeleton>
+      ))}
     </KanbanBoardContainer>
   )
 }
