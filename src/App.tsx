@@ -19,6 +19,7 @@ import { resources } from "./config/resources";
 import Create from "./pages/company/create";
 import Edit from "./pages/company/edit";
 import List from "./pages/tasks/list";
+import TasksCreatePage from "./pages/tasks/create";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
                           <Outlet />
                         </List>
                       }>
+                      <Route path="new" element={<TasksCreatePage />} />
                       </Route>
                   </Route>
                 </Routes>
