@@ -1,5 +1,5 @@
-import { Authenticated, GitHubBanner, Refine } from "@refinedev/core";
-import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
+import { Authenticated, Refine } from "@refinedev/core";
+// import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
 import { useNotificationProvider } from "@refinedev/antd";
@@ -20,14 +20,13 @@ import Create from "./pages/company/create";
 import Edit from "./pages/company/edit";
 import List from "./pages/tasks/list";
 import TasksCreatePage from "./pages/tasks/create";
+import TasksEditPage from "./pages/tasks/edit";
 
 function App() {
   return (
     <BrowserRouter>
-      <GitHubBanner />
       <RefineKbarProvider>
           <AntdApp>
-            <DevtoolsProvider>
               <Refine
                 dataProvider={dataProvider}
                 liveProvider={liveProvider}
@@ -70,6 +69,7 @@ function App() {
                         </List>
                       }>
                       <Route path="new" element={<TasksCreatePage />} />
+                      <Route path="edit/:id" element={<TasksEditPage />} />
                       </Route>
                   </Route>
                 </Routes>
@@ -77,8 +77,6 @@ function App() {
                 <UnsavedChangesNotifier />
                 <DocumentTitleHandler />
               </Refine>
-              <DevtoolsPanel />
-            </DevtoolsProvider>
           </AntdApp>
       </RefineKbarProvider>
     </BrowserRouter>
