@@ -7,6 +7,7 @@
 
   <div>
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
     <img src="https://img.shields.io/badge/-Refine-black?style=for-the-badge&logoColor=white&logo=refine&color=14141F" alt="refine" />
     <img src="https://img.shields.io/badge/-Ant_Design-black?style=for-the-badge&logoColor=white&logo=antdesign&color=0170FE" alt="antd" />
   </div>
