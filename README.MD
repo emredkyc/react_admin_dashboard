@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://react-dashboard-dev.vercel.app" target="_blank">
-      <img src="https://ibb.co/v1yNyfR"><img src="https://i.ibb.co/9nKxKBS/react-dashboard.png" alt="Project Banner">
+      <img src="https://i.ibb.co/9nKxKBS/react-dashboard.png" alt="Project Banner">
     </a>
   <br />
 
