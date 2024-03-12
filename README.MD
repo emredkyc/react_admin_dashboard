@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://react-dashboard-dev.vercel.app" target="_blank">
-      <img src="https://i.ibb.co/M6h5fFr/react-dashboard.png" alt="Project Banner" border="0">
+      <img src="https://i.ibb.co/16nJMF1/react-dashboard.png" alt="Project Banner" border="0">
     </a>
   <br />
 
@@ -2015,4 +2015,4 @@ export const UserTag = ({ user }: Props) => {
 
 ## <a name="links">🔗 Links</a>
 
-Other components (Kanban Edit Forms, Skeletons and utilities) used in the project can be found [here]()
+Other components (Kanban Edit Forms, Skeletons and utilities) used in the project can be found [here](https://drive.google.com/file/d/1zGgDGKTlGl_w5_KugjxKQLGLsPAiztuK/view)
