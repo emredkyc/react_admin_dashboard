@@ -2015,4 +2015,4 @@ export const UserTag = ({ user }: Props) => {
 
 ## <a name="links">🔗 Links</a>
 
-Other components (Kanban Edit Forms, Skeletons and utilities) used in the project can be found [here]()
+Other components (Kanban Edit Forms, Skeletons and utilities) used in the project can be found [here](https://drive.google.com/file/d/1zGgDGKTlGl_w5_KugjxKQLGLsPAiztuK/view)
